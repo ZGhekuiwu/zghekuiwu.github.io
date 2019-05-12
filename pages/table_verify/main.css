@@ -1,0 +1,52 @@
+body{background-color: #eee;}
+body{font-family: Microsoft YaHei,'ËÎÌå' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;	background-color: #fff;}
+div#wrapper
+{
+	width: 600px;
+	/*height: 600px;*/
+	margin:0 auto;
+	padding:  2em;
+	border: 1px black dashed;
+	background-color: white;
+
+}
+li{color: #2980b9}
+.menu
+{
+	visibility: hidden;
+	background-color: #eee;
+
+}
+.menu ul li a
+{
+	text-decoration: none;
+	list-style-type: none;
+	
+}
+
+div#my_form
+{
+	padding: 2em;
+	background-color: #eee;
+
+}
+div#my_form label
+{
+	display: block;
+}
+span.error_msg
+{
+	/*color: red;*/
+	padding-left: 1em;
+	/*font-style: bold;*/
+}
+div#my_form input
+{
+	width: 10em;
+	padding-left: 5px;
+}
+div#result
+{
+	padding: 1em;
+	height: 200px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>手风琴</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    .wrapper {
+        /*width: 800px;*/
+        margin: 50px auto;
+        width:712px;
+        /*display: relative;*/
+    }
+    
+    .wrapper ul {
+        /*width: 5000px;*/
+        position: relative;
+        height: 320px;
+        width:712px;
+        display: relative;
+        /*margin-left:100px;*/
+        overflow: hidden;
+    }
+    
+    .wrapper ul li {
+        width: 512px;
+        height: 320px;
+        float: left;
+        position: absolute;
+    }
+    
+    .wrapper ul li img {
+        width: 100%;
+    }
+    
+    .clearfix:after {
+        content: '.';
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="clearfix">
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+            <li><img src="img/5.jpg" alt=""></li>
+        </ul>
+    </div>
+    <script src= '../animate.js'></script>
+    <script src='menu.js'></script>
+</body>
+
+</html>

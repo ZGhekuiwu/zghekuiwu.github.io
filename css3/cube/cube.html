@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>立方体 - 鼠标移入</title>
+		<style type="text/css">
+			/*第一步:把body北京设置成黑色*/
+			
+			html,
+			body {
+				background: black;
+				/*视距 视野离物体的距离，值越大，视野离物体越远*/
+				/*perspective: 2px;*/
+			}
+			/*第二步:给六个面所在的容器设置一个样式*/
+			
+			.wrap {
+				width: 400px;
+				height: 400px;
+				/*水平居中*/
+				margin: 200px auto;
+				/*设置相对定位*/
+				position: relative;
+				/*添加一个过渡效果*/
+				transition: 4s;
+				/*声明3D属性，才可以使用rotateX和rotateY*/
+				transform-style: preserve-3d;
+			}
+			
+			.wrap:hover {
+				transform: rotateX(360deg) rotateY(360deg);
+			}
+			/*第三步:对六个面进行统一设置*/
+			
+			.wrap div {
+				/*background: rgba(122,145,250,0.2);*/
+				width: 400px;
+				height: 400px;
+				/*设置绝对定位,使六个面叠加*/
+				position: absolute;
+				/*文字水平居中*/
+				text-align: center;
+				/*垂直居中*/
+				line-height: 400px;
+				/*设置字体*/
+				font-size: 50px;
+				/*加边框*/
+				border: 3px solid blue;
+			}
+			
+			.wrap img {
+				width: 400px;
+				height: 400px;
+			}
+			/*开始设置六个面*/
+			/*设置第一面*/
+			
+			.wrap div:nth-child(1) {
+				background: rgba(122, 234, 124, 0.6);
+				transform: translateZ(200px);
+			}
+			/*设置第二面*/
+			
+			.wrap div:nth-child(2) {
+				background: rgba(122, 234, 124, 0.6);
+				transform: translateZ(-200px);
+			}
+			/*设置第三面*/
+			
+			.wrap div:nth-child(3) {
+				background: rgba(241, 210, 10, 0.6);
+				transform: translateY(-200px) rotateX(90deg);
+			}
+			/*设置第四面*/
+			
+			.wrap div:nth-child(4) {
+				background: rgba(241, 210, 10, 0.6);
+				transform: translateY(200px) rotateX(90deg);
+			}
+			/*设置第五面*/
+			
+			.wrap div:nth-child(5) {
+				background: rgba(210, 20, 100, 0.6);
+				transform: translateX(-200px) rotateY(90deg);
+			}
+			/*设置第六面*/
+			
+			.wrap div:nth-child(6) {
+				background: rgba(210, 20, 100, 0.6);
+				transform: translateX(200px) rotateY(90deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div><img src="../../head.png" /></div>
+			<div><img src="../../head.png" /></div>
+			<div><img src="../../head.png" /></div>
+			<div><img src="../../head.png" /></div>
+			<div><img src="../../head.png" /></div>
+			<div><img src="../../head.png" /></div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>小米账号登录</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+<div class="wrapper">
+	<div class="warp">
+		<div class="login">
+			<div class="login-head">
+				<i class="iconfont iconhome">&#xe600;</i>
+				<h4>小米账号登录</h4>
+			</div>
+			<!-- 表单输入区域 -->
+			<div class="login-area">
+				<form action="index.html" method="">
+				<!-- 验证用户名 -->
+					<div class="login-input">
+						<label class="label-box">
+							<input type="text" name="username" id="" placeholder="直接点击登录就可以上" />
+						</label>
+						<label class="label-box">
+							<input type="password" name="password" id="" placeholder="密码" />
+						</label>
+					</div>
+					<!-- 错误信息 -->
+					<div class="login-error" style="display: none;">
+						<span class="adenglu adenglu_r4_c2">错误提示</span>
+					</div>
+					<!-- 登录频繁 -->
+					<div class="login-err-forbidden" style="display: none;"><span class="adenglu adenglu_r4_c2">您的操作频率过快，请稍后再试。</span></div>
+					<div class="login-button">
+						<input type="submit" value="立即登录" />
+					</div>
+					<!-- 其他方式登录 -->
+					<div class="login-other">
+						<fieldset><legend>其他方式登录</legend></fieldset>
+						<div class="login-other-link">
+							<a href=""><i class="iconfont">&#xe601;</i></a>
+							<a href=""><i class="iconfont">&#xe602;</i></a>
+							<a href=""><i class="iconfont">&#xe603;</i></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- 其他方式登录 注册 -->
+		<div class="n-link-area">
+			<a href="javascript:;">注册小米账号</a><span>|</span><a href="javascript:;">忘记密码</a>
+		</div>
+		<!-- 验证码登录 -->
+		<div class="ercode">
+			<i class="adenglu adenglu_r2_c6"></i>
+		</div>
+	</div>
+	<section class="l-footer">
+		<div class="lf-link">
+			<ul>
+				<li><a href="javascript:void(0)">简体</a>|</li>
+				<li><a href="javascript:void(0)">繁体</a>|</li>
+				<li><a href="javascript:void(0)">English</a>|</li>
+				<li><a href="javascript:void(0)">FAQ</a></li>
+			</ul>
+		</div>
+		<p><span>Xiaomi Inc., All rights reserved - Beijing ICP - 10046444 -<i class="adenglu adenglu_r6_c4"></i><a href="#">京公网安备11010802020134号</a></span>- Beijing ICP licence No. - 110507</p>
+	</section>
+</div>
+</body>
+</html>

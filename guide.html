@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>光阴荏苒，岁月如梭</title>
+		<link rel="icon" href="img/jike.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/guide.css" />
+		<style type="text/css">
+			@keyframes loading {
+				0% {
+					transform: rotateX(0deg) rotateY(0deg);
+				}
+				50% {
+					transform: rotateX(0deg) rotateY(180deg);
+				}
+				100% {
+					transform: rotateX(180deg) rotateY(180deg);
+				}
+			}
+			
+			#loading .loadingImg {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 100px;
+				height: 100px;
+				margin-left: -50px;
+				margin-top: -50px;
+				transform-style: preserve-3d;
+				/*transform-origin: center center 200px;*/
+				animation: loading 2s linear infinite;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="loading">
+			<div class="loadingImg">
+				<img src="img/loading.png">
+			</div>
+		</div>
+		<section id="start">
+			<div id="galaxyBox">
+				<div id="galaxy">
+					<div class="partLeft partAll">
+						<img src="img/panorama-left.jpg">
+					</div>
+					<div class="partAfter partAll">
+						<img src="img/panorama-back.jpg">
+					</div>
+					<div class="partRight partAll">
+						<img src="img/panorama-right.jpg">
+					</div>
+					<div class="partFront partAll">
+						<img src="img/panorama-front.jpg">
+					</div>
+					<div class="partUp partAll">
+						<img src="img/panorama-up.jpg">
+					</div>
+					<div class="partDown partAll">
+						<img src="img/panorama-down.jpg">
+					</div>
+				</div>
+			</div>
+			<canvas id="canvas">您的浏览器不支持canvas动画！</canvas>
+			<div id="change">
+				<div class="aBtn">
+					<b class="one"></b>
+					<b class="two"></b>
+					<b class="three"></b>
+					<b class="four"></b>
+					<span class="text">点 击 继 续</span>
+				</div>
+			</div>
+			<div id="cover"></div>
+			<div id="comet">
+				<img src="img/huixing.png">
+			</div>
+			<div id="content">
+				<div class="text">
+					<p class="language">星 光 黯 淡，难 以 耀 及</p>
+					<p class="language">人 影 纷 繁，难 于 相 知</p>
+					<div class="btn">
+						<div class="aBtn" onclick="jump()">点 我 了 解</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="js/cTween.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/guide.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function jump() {
+				window.setTimeout("window.location='homepage.html'", 1500);
+			}
+		</script>
+	</body>
+
+</html>

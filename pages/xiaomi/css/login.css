@@ -1,0 +1,329 @@
+@charset "UTF-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  font-size: 12px;
+  font-family: arial,"Hiragino Sans GB","Microsoft YaHei","微軟正黑體","儷黑 Pro",sans-serif;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+input {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  overflow: visible;
+}
+
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  border: 0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../fonts/iconfont.eot?t=1471685251");
+  /* IE9*/
+  src: url("../fonts/iconfont.eot?t=1471685251#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff?t=1471685251") format("woff"), url("../fonts/iconfont.ttf?t=1471685251") format("truetype"), url("../fonts/iconfont.svg?t=1471685251#iconfont") format("svg");
+  /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.adenglu {
+  background: url("../images/adenglu.png") top left no-repeat;
+}
+
+.adenglu_r2_c6 {
+  width: 48px;
+  height: 49px;
+  background-position: -10px -10px;
+}
+
+.adenglu_r6_c4 {
+  width: 18px;
+  height: 20px;
+  background-position: -10px -69px;
+}
+
+.adenglu_r4_c2 {
+  width: 14px;
+  height: 14px;
+  background-position: -38px -64px;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  background: #F5F5F5;
+}
+
+.warp {
+  width: 860px;
+  background: #fff;
+  margin: 0 auto 25px;
+  position: relative;
+}
+
+.warp .login {
+  width: 356px;
+  margin: 0 auto;
+}
+
+.warp .login .login-head {
+  text-align: center;
+  padding-top: 35px;
+}
+
+.warp .login .login-head .iconhome {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: #EF5B00;
+  text-align: center;
+  line-height: 48px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.warp .login .login-head h4 {
+  margin: 27px 0 40px 0;
+  font-size: 30px;
+  font-weight: 200;
+  color: #424242;
+}
+
+.warp .login .login-input .label-box {
+  display: block;
+  border: 1px solid #E0E0E0;
+  margin-bottom: 14px;
+}
+
+.warp .login .login-input .label-box input {
+  display: block;
+  width: 326px;
+  height: 22px;
+  padding: 13px 12px 13px 16px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+.warp .login .login-error, .warp .login .login-err-forbidden {
+  margin: 15px 0;
+  position: relative;
+}
+
+.warp .login .login-error span, .warp .login .login-err-forbidden span {
+  display: inline-block;
+  width: 100%;
+  padding-left: 19px;
+  line-height: 26px;
+  height: 26px;
+  font-size: 12px;
+  color: #EF5B00;
+}
+
+.warp .login .login-button {
+  margin-bottom: 35px;
+}
+
+.warp .login .login-button input[type="submit"] {
+  display: block;
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border: none;
+  outline: none;
+  background-color: #EF5B00;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.warp .login .login-other fieldset {
+  margin: 0 0 20px 0;
+  padding: 0;
+  border-top: 1px solid #e1e1e1;
+  text-align: center;
+  color: #B0B0B0;
+}
+
+.warp .login .login-other .login-other-link {
+  width: 200px;
+  height: 34px;
+  margin: 0 auto;
+  font-size: 0;
+  margin-bottom: 45px;
+}
+
+.warp .login .login-other .login-other-link a {
+  display: inline-block;
+  width: 33.3%;
+  text-align: center;
+}
+
+.warp .login .login-other .login-other-link a i {
+  display: block;
+  font-size: 34px;
+  color: #949494;
+  line-height: 34px;
+}
+
+.warp .login .login-other .login-other-link a:nth-child(odd):hover > i {
+  color: blue;
+}
+
+.warp .login .login-other .login-other-link a:nth-child(2):hover > i {
+  color: red;
+}
+
+.warp .n-link-area {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.warp .n-link-area a {
+  color: #757575;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.warp .n-link-area a:hover {
+  color: #EF5B00;
+}
+
+.warp .n-link-area span {
+  color: #757575;
+}
+
+.warp .ercode {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.warp .ercode i {
+  display: block;
+  opacity: 0.3;
+}
+
+.warp .ercode i:hover {
+  opacity: 1;
+}
+
+.l-footer {
+  background-color: #F5F5F5;
+  text-align: center;
+}
+
+.l-footer .lf-link {
+  margin-bottom: 20px;
+}
+
+.l-footer .lf-link ul {
+  list-style: none;
+}
+
+.l-footer .lf-link ul li {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.l-footer .lf-link ul li a {
+  display: inline-block;
+  padding: 0 12px;
+  color: #757575;
+}
+
+.l-footer .lf-link ul li a:hover {
+  color: #333;
+}
+
+.l-footer p {
+  padding-bottom: 30px;
+  color: #757575;
+}
+
+.l-footer p i {
+  display: inline-block;
+}
+
+.l-footer p a {
+  color: #757575;
+}

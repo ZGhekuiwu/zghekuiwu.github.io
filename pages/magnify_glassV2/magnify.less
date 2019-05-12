@@ -1,0 +1,54 @@
+@width: 420px;
+@height: 420px;
+p {
+    text-align: center;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    .img-small {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: @width;
+        height: @height;
+        border: 1px solid #ccc;
+        text-align: center;
+        .img-and-mask {
+            height: 100%;
+            img {
+                cursor: move;
+                height: 100%;
+            }
+            .mask {
+                position: absolute;
+                display: none;
+                left: 0;
+                top: 0;
+                width: @width/10;
+                height: @height/10;
+                opacity: .5;
+                background-color: #E6F10D;
+                cursor: move;
+            }
+        }
+    }
+    .img-big {
+        position: relative;
+        display: none;
+        left: @width + 20px;
+        width: @width*1;
+        height: @height*1;
+        overflow: hidden;
+        img {
+            height: @height
+*10;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}

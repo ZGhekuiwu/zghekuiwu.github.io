@@ -1,0 +1,278 @@
+/*首页样式*/
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font: 12px / 20px Arial, "微软雅黑";
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	vertical-align: top;
+}
+
+
+/*loading页面开始*/
+
+#loading {
+	position: relative;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(0deg, #9db5f5 40%, #273e60 100%);
+	transition: all 1s linear;
+	perspective: 800px;
+}
+
+
+/*loading页面结束*/
+
+
+/*首屏展示*/
+
+#start {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../img/starSky.jpg) no-repeat fixed center center /cover;
+	opacity: 1;
+}
+
+#start .aBtn {
+	display: inline-block;
+	width: 200px;
+	height: 52px;
+	font: 20px / 52px "微软雅黑";
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	text-align: center;
+	color: #fff;
+}
+
+
+/*3D星空图*/
+
+#galaxyBox {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-left: -402px;
+	margin-top: -402px;
+	width: 804px;
+	height: 804px;
+	perspective: 600px;
+}
+
+#galaxy {
+	position: relative;
+	width: 804px;
+	height: 804px;
+	transform-style: preserve-3d;
+	transform-origin: center center 392px;
+	transform: rotateY(-90deg);
+}
+
+#galaxy .partAll {
+	position: absolute;
+	width: 804px;
+	height: 804px;
+}
+
+#galaxy .partAll img {
+	width: 100%;
+	height: 100%;
+}
+
+#galaxy .partLeft {
+	left: -797px;
+	top: -3px;
+	transform-origin: right;
+	transform: translateZ(-20px) rotateY(90deg);
+}
+
+#galaxy .partAfter {
+	left: 0;
+	top: 0;
+	transform: translateZ(-20px);
+}
+
+#galaxy .partRight {
+	left: 798px;
+	top: -1px;
+	transform-origin: left;
+	transform: translateZ(-20px) rotateY(-90deg);
+}
+
+#galaxy .partFront {
+	left: 0;
+	top: 0;
+	transform: translateZ(784px) rotateY(180deg);
+}
+
+#galaxy .partUp {
+	left: 0;
+	top: -796px;
+	transform-origin: bottom;
+	transform: translateZ(786px) rotateX(90deg) rotateY(-180deg);
+}
+
+#galaxy .partDown {
+	left: 0;
+	top: 800px;
+	transform-origin: top;
+	transform: translateZ(-20px) rotateX(90deg);
+}
+
+
+/*闪烁的星星和流星*/
+
+#canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+
+/*遮盖层*/
+
+#cover {
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 300;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	opacity: 0.5;
+}
+
+#change {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}
+
+#change .aBtn {
+	position: absolute;
+	left: 50%;
+	bottom: 160px;
+	margin-left: -100px;
+	font-size: 18px;
+	background: rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+#change .aBtn:hover {
+	background: rgba(255, 255, 255, 0.4);
+	color: #000;
+}
+
+#change b {
+	position: absolute;
+	transition: all .6s;
+}
+
+#change .one {
+	left: -1px;
+	top: 0;
+	width: 1px;
+	border-left: 1px solid #000;
+}
+
+#change .two {
+	left: 0;
+	bottom: -1px;
+	height: 1px;
+	border-bottom: 1px solid #000;
+}
+
+#change .three {
+	right: -1px;
+	bottom: 0;
+	width: 1px;
+	border-right: 1px solid #000;
+}
+
+#change .four {
+	right: 0;
+	top: -1px;
+	height: 1px;
+	border-top: 1px solid #000;
+}
+
+
+/*彗星样式*/
+
+#comet {
+	position: absolute;
+	left: -390px;
+	top: 10px;
+	width: 390px;
+	height: 100px;
+}
+
+#comet img {
+	width: 100%;
+	height: 100%;
+}
+
+#content {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	width: 100%;
+	height: 100%;
+}
+
+#content .text {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 160px;
+}
+
+#content .language {
+	height: 30px;
+	text-align: center;
+	font: 18px / 40px '微软雅黑';
+	word-spacing: 8px;
+	color: #fff;
+}
+
+#content .btn {
+	padding-top: 28px;
+	height: 60px;
+	text-align: center;
+}
+
+#content .aBtn {
+	border-radius: 10px / 8px;
+	transition: all .5s;
+	cursor: pointer;
+}
+
+#content .aBtn:hover {
+	background: rgba(255, 255, 255, .5);
+	color: #333;
+}

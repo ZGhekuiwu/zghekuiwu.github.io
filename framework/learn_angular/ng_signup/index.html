@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <script src="../../../script/angular.min.js"></script>
+    <script src='signup.js'></script>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+
+<body>
+    <div class="wrapper" ng-app="myApp" ng-controller='myCtrl'>
+        <div class="logo"><img src="img/logo.png" alt="" ng-submit="signupSubmit()"></div>
+        <p>与世界分享你的知识、经验和见解</p>
+        <span ng-class='{active:formType == "signup"}' ng-click='formType = "signup"'>注册</span>
+        <span ng-class='{active:formType == "login"}' ng-click='formType = "login"'>登陆</span>
+        <form class="signup-form" ng-show='formType == "signup"' name="signupForm" novalidate>
+            <input type="text" name="name" placeholder="姓名" ng-model='signup.name' required>
+            <span class="error" >{{signupError.name}}</span>
+            <input type="email" name="email" placeholder="邮箱" ng-model='signup.email' required>
+            <span class="error" > {{signupError.email}}</span>
+            <input type="password" name="password" placeholder="密码(不少于6位)" ng-model='signup.password' ng-minlength=6 required>
+            <span class="error" > {{signupError.password}}</span>
+            <input type="submit" ng-click="signupSubmit()" name="" value="注册知乎">
+            <!--             <input type="submit" ng-disabled='signupForm.name.$invalid || signupForm.email.$invalid || signupForm.password.$invalid || signupError == null' ng-click="signupSubmit()" name="" value="注册知乎">
+ -->
+            <p>点击「注册」按钮，即代表你同意<a href="javascript:;">《知乎协议》</a></p>
+            <div class="signup-result result" ng-show='isSignupValid' >
+                <p>注册成功</p>
+                <p>用户名为{{signupResult.name}}</p>
+                <p>邮箱为{{signupResult.email}}</p>
+                <p>请牢记密码</p>
+            </div>
+        </form>
+        <form class="login-form" ng-show='formType == "login"' name='loginForm' novalidate>
+            <input type="text" name="name" ng-model='login.name' required placeholder="用户名或邮箱">
+            <span class="error" >{{loginError.name}}</span>
+            <input type="password" name="password" ng-model='login.password' required placeholder="输入密码">
+            <span class="error" >{{loginError.password}}</span>
+            <input type="submit" name="" value="登陆" ng-click="loginSubmit()">
+            <div>
+                <input type="checkbox" name="" value="">记住我
+                <a href="javascript:;" title="">无法登陆</a>
+            </div>
+            <div class="login-result"></div>
+        </form>
+        <input type="button" class='download' value="下载知乎APP">
+    </div>
+</body>
+
+</html>
